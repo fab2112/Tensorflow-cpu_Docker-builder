@@ -57,7 +57,7 @@ docker run --rm -it \
 
 ```
 # Example
-pip install /tf_wheel/tensorflow-2.15.0-cp310-cp310-linux_x86_64.whl 
+pip install ./tf_wheel/tensorflow-2.15.0-cp310-cp310-linux_x86_64.whl 
 ```
 
 <br/>
