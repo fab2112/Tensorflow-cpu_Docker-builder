@@ -48,7 +48,7 @@ docker run --rm -it \
     --name tf-builder-from-source \
     --cpus=4 \
     --volume $(pwd)/tf_wheel:/tf_wheel:rw \
-    --env TF_PYTHON_VERSION=3.10 \
+    --env TF_PYTHON_VERSION=3.11 \
     tf-builder-from-source
 ```
 
@@ -57,7 +57,7 @@ docker run --rm -it \
 
 ```
 # Example
-pip install ./tf_wheel/tensorflow-2.15.0-cp310-cp310-linux_x86_64.whl 
+pip install ./tf_wheel/tensorflow_cpu-2.18.0-cp311-cp311-linux_x86_64.whl
 ```
 
 <br/>
