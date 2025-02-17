@@ -64,7 +64,8 @@ pip install ./tf_wheel/tensorflow-2.15.0-cp310-cp310-linux_x86_64.whl
 
 ### Native configurations
 
-- Configuration parameters during docker runtime:
+- Configuration parameters during docker runtime
+- Check you CPU "Optimization Flags"
 
 | Parameters           | Settings                       |
 | -------------------- | ------------------------------ |
@@ -75,6 +76,14 @@ pip install ./tf_wheel/tensorflow-2.15.0-cp310-cp310-linux_x86_64.whl
 | CLang as Compiler    | Y                              |
 | Optimization Flags   | -march=native                  |
 | Android Builds       | N                              |
+
+<br/>
+
+### Check Optimization Flags via terminal
+
+```
+grep flags -m1 /proc/cpuinfo | cut -d ":" -f 2 | tr '[:upper:]' '[:lower:]' | { read FLAGS; OPT="-march=native"; for flag in $FLAGS; do case "$flag" in "sse4_1" | "sse4_2" | "ssse3" | "fma" | "cx16" | "popcnt" | "avx" | "avx2") OPT+=" -m$flag";; esac; done; MODOPT=${OPT//_/\.}; echo "$MODOPT"; }
+```
 
 <br/>
 
