@@ -65,7 +65,7 @@ pip install ./tf_wheel/tensorflow_cpu-2.18.0-cp311-cp311-linux_x86_64.whl
 ### Native configurations
 
 - Configuration parameters during docker runtime
-- Check you CPU "Optimization Flags"
+- Check your CPU "Optimization Flags"
 
 | Parameters           | Settings                       |
 | -------------------- | ------------------------------ |
